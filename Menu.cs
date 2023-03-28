@@ -27,6 +27,19 @@ namespace Project_1
 
         }
 
+        private void timer1_Tick_1(object sender, EventArgs e)
+        {
+            this.labelTime.Text = DateTime.Now.ToString("hh:mm:ss");
+            int hours = int.Parse(DateTime.Now.ToString("HH"));
+            if (hours > 12)
+            {
+                labelAMPM.Text = "PM";
+            }
+            else
+            {
+                labelAMPM.Text = "AM";
+            }
+        }
         private void label1_Click(object sender, EventArgs e)
         {
             this.Hide();

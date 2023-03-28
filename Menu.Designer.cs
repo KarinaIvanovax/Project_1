@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.panel1 = new System.Windows.Forms.Panel();
             this.exit = new System.Windows.Forms.Label();
@@ -44,6 +45,9 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.labelTime = new System.Windows.Forms.Label();
+            this.labelAMPM = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -57,6 +61,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(204)))), ((int)(((byte)(213)))), ((int)(((byte)(174)))));
+            this.panel1.Controls.Add(this.labelAMPM);
+            this.panel1.Controls.Add(this.labelTime);
             this.panel1.Controls.Add(this.exit);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label5);
@@ -233,6 +239,31 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // labelTime
+            // 
+            this.labelTime.AutoSize = true;
+            this.labelTime.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelTime.Location = new System.Drawing.Point(500, 9);
+            this.labelTime.Name = "labelTime";
+            this.labelTime.Size = new System.Drawing.Size(150, 42);
+            this.labelTime.TabIndex = 14;
+            this.labelTime.Text = "00:00:00";
+            // 
+            // labelAMPM
+            // 
+            this.labelAMPM.AutoSize = true;
+            this.labelAMPM.Font = new System.Drawing.Font("Times New Roman", 22.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelAMPM.Location = new System.Drawing.Point(656, 9);
+            this.labelAMPM.Name = "labelAMPM";
+            this.labelAMPM.Size = new System.Drawing.Size(72, 42);
+            this.labelAMPM.TabIndex = 15;
+            this.labelAMPM.Text = "XX";
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick_1);
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -273,5 +304,8 @@
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label exit;
+        private System.Windows.Forms.Label labelAMPM;
+        private System.Windows.Forms.Label labelTime;
+        private System.Windows.Forms.Timer timer1;
     }
 }

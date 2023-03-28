@@ -16,6 +16,30 @@ namespace Project_1
         public Registration()
         {
             InitializeComponent();
+
+            name.Text = "Введите имя";
+            name.ForeColor = Color.Gray;
+
+            surname.Text = "Введите фамилию";
+            surname.ForeColor = Color.Gray;
+
+            patronym.Text = "Введите отчество";
+            patronym.ForeColor = Color.Gray;
+
+            birthdate.Text = "Введите дату рождения";
+            birthdate.ForeColor = Color.Gray;
+
+            job.Text = "Введите должность";
+            job.ForeColor = Color.Gray;
+
+            login.Text = "Введите логин";
+            login.ForeColor = Color.Gray;
+
+            password.Text = "Введите пароль";
+            password.ForeColor = Color.Gray;
+
+            doublepassword.Text = "Введите пароль повторно";
+            doublepassword.ForeColor = Color.Gray;
         }
 
 
@@ -76,6 +100,16 @@ namespace Project_1
             if (patronym.Text == "")
             {
                 MessageBox.Show("Введите отчество");
+                return;
+            }
+            if (birthdate.Text == "")
+            {
+                MessageBox.Show("Введите дату рождения");
+                return;
+            }
+            if (job.Text == "")
+            {
+                MessageBox.Show("Введите должность");
                 return;
             }
             if (login.Text == "")
@@ -151,6 +185,75 @@ namespace Project_1
             autoreg.ForeColor = Color.DarkSlateBlue;
         }
 
+        private void name_Enter(object sender, EventArgs e)
+        {
+            if (name.Text == "Введите имя")
+            {
+                name.Text = "";
+                name.ForeColor = Color.Black;
+            }
+        }
 
+        private void name_Leave(object sender, EventArgs e)
+        {
+            if (name.Text == "")
+            {
+                name.Text = "Введите имя";
+                name.ForeColor = Color.Gray;
+            }
+        }
+
+        private void surname_Enter(object sender, EventArgs e)
+        {
+            if (surname.Text == "Введите фамилию")
+            {
+                surname.Text = "";
+                surname.ForeColor = Color.Black;
+            }
+        }
+
+        private void surname_Leave(object sender, EventArgs e)
+        {
+            if (surname.Text == "")
+            {
+                surname.Text = "Введите фамилию";
+                surname.ForeColor = Color.Gray;
+            }
+        }
+
+        private void patronym_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void patronym_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void password_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void password_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void doublepassword_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void doublepassword_Leave(object sender, EventArgs e)
+        {
+
+        }
+
+        private void password_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
