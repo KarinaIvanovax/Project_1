@@ -105,6 +105,23 @@ namespace Project_1
             reg.ForeColor = Color.DarkSlateBlue;
         }
 
-        
+        private void login_Enter(object sender, EventArgs e)
+        {
+            if (login.Text == "Логин")
+            {
+                login.Text = "";
+                login.ForeColor = Color.Black;
+            }
+        }
+
+        private void login_Leave(object sender, EventArgs e)
+        {
+            if (login.Text == "")
+            {
+                login.Text = "Логин";
+                login.ForeColor = Color.Gray;
+            }
+        }
+
     }
 }

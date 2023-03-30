@@ -30,6 +30,8 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Registration));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.birthdate = new System.Windows.Forms.TextBox();
+            this.job = new System.Windows.Forms.TextBox();
             this.autoreg = new System.Windows.Forms.Label();
             this.password = new System.Windows.Forms.TextBox();
             this.doublepassword = new System.Windows.Forms.TextBox();
@@ -42,8 +44,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.exit = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.job = new System.Windows.Forms.TextBox();
-            this.birthdate = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -72,6 +72,34 @@
             this.panel1.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseDown);
             this.panel1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel1_MouseMove);
             // 
+            // birthdate
+            // 
+            this.birthdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(237)))), ((int)(((byte)(201)))));
+            this.birthdate.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.birthdate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.birthdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.birthdate.Location = new System.Drawing.Point(137, 302);
+            this.birthdate.Multiline = true;
+            this.birthdate.Name = "birthdate";
+            this.birthdate.Size = new System.Drawing.Size(266, 32);
+            this.birthdate.TabIndex = 19;
+            this.birthdate.Enter += new System.EventHandler(this.birthdate_Enter);
+            this.birthdate.Leave += new System.EventHandler(this.birthdate_Leave);
+            // 
+            // job
+            // 
+            this.job.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(237)))), ((int)(((byte)(201)))));
+            this.job.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.job.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.job.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.job.Location = new System.Drawing.Point(137, 355);
+            this.job.Multiline = true;
+            this.job.Name = "job";
+            this.job.Size = new System.Drawing.Size(266, 32);
+            this.job.TabIndex = 18;
+            this.job.Enter += new System.EventHandler(this.job_Enter);
+            this.job.Leave += new System.EventHandler(this.job_Leave);
+            // 
             // autoreg
             // 
             this.autoreg.AutoSize = true;
@@ -98,6 +126,8 @@
             this.password.Size = new System.Drawing.Size(266, 32);
             this.password.TabIndex = 10;
             this.password.TextChanged += new System.EventHandler(this.password_TextChanged);
+            this.password.Enter += new System.EventHandler(this.password_Enter);
+            this.password.Leave += new System.EventHandler(this.password_Leave);
             // 
             // doublepassword
             // 
@@ -110,6 +140,8 @@
             this.doublepassword.Name = "doublepassword";
             this.doublepassword.Size = new System.Drawing.Size(266, 32);
             this.doublepassword.TabIndex = 9;
+            this.doublepassword.Enter += new System.EventHandler(this.doublepassword_Enter);
+            this.doublepassword.Leave += new System.EventHandler(this.doublepassword_Leave);
             // 
             // login
             // 
@@ -122,6 +154,8 @@
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(266, 32);
             this.login.TabIndex = 8;
+            this.login.Enter += new System.EventHandler(this.login_Enter);
+            this.login.Leave += new System.EventHandler(this.login_Leave);
             // 
             // surname
             // 
@@ -230,30 +264,6 @@
             this.label1.Size = new System.Drawing.Size(227, 46);
             this.label1.TabIndex = 0;
             this.label1.Text = "Регистрация";
-            // 
-            // job
-            // 
-            this.job.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(237)))), ((int)(((byte)(201)))));
-            this.job.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.job.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.job.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.job.Location = new System.Drawing.Point(137, 355);
-            this.job.Multiline = true;
-            this.job.Name = "job";
-            this.job.Size = new System.Drawing.Size(266, 32);
-            this.job.TabIndex = 18;
-            // 
-            // birthdate
-            // 
-            this.birthdate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(233)))), ((int)(((byte)(237)))), ((int)(((byte)(201)))));
-            this.birthdate.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.birthdate.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.birthdate.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.birthdate.Location = new System.Drawing.Point(137, 302);
-            this.birthdate.Multiline = true;
-            this.birthdate.Name = "birthdate";
-            this.birthdate.Size = new System.Drawing.Size(266, 32);
-            this.birthdate.TabIndex = 19;
             // 
             // Registration
             // 

@@ -223,32 +223,106 @@ namespace Project_1
 
         private void patronym_Enter(object sender, EventArgs e)
         {
-
+            if (patronym.Text == "Введите отчество")
+            {
+                patronym.Text = "";
+                patronym.ForeColor = Color.Black;
+            }
         }
 
         private void patronym_Leave(object sender, EventArgs e)
         {
-
+            if (patronym.Text == "")
+            {
+                patronym.Text = "Введите отчество";
+                patronym.ForeColor = Color.Gray;
+            }
+        }
+        private void birthdate_Enter(object sender, EventArgs e)
+        {
+            if (birthdate.Text == "Введите дату рождения")
+            {
+                birthdate.Text = "";
+                birthdate.ForeColor = Color.Black;
+            }
         }
 
+        private void birthdate_Leave(object sender, EventArgs e)
+        {
+            if (birthdate.Text == "")
+            {
+                birthdate.Text = "Введите дату рождения";
+                birthdate.ForeColor = Color.Gray;
+            }
+        }
+        private void job_Enter(object sender, EventArgs e)
+        {
+            if (job.Text == "Введите должность")
+            {
+                job.Text = "";
+                job.ForeColor = Color.Black;
+            }
+        }
+
+        private void job_Leave(object sender, EventArgs e)
+        {
+            if (job.Text == "")
+            {
+                job.Text = "Введите должность";
+                job.ForeColor = Color.Gray;
+            }
+        }
+        private void login_Enter(object sender, EventArgs e)
+        {
+            if (login.Text == "Введите логин")
+            {
+                login.Text = "";
+                login.ForeColor = Color.Black;
+            }
+        }
+
+        private void login_Leave(object sender, EventArgs e)
+        {
+            if (login.Text == "")
+            {
+                login.Text = "Введите логин";
+                login.ForeColor = Color.Gray;
+            }
+        }
         private void password_Enter(object sender, EventArgs e)
         {
-
+            if (password.Text == "Введите пароль")
+            {
+                password.Text = "";
+                password.ForeColor = Color.Black;
+            }
         }
 
         private void password_Leave(object sender, EventArgs e)
         {
-
+            if (password.Text == "")
+            {
+                password.Text = "Введите пароль";
+                password.ForeColor = Color.Gray;
+            }
         }
 
         private void doublepassword_Enter(object sender, EventArgs e)
         {
-
+            if (doublepassword.Text == "Введите пароль повторно")
+            {
+                doublepassword.Text = "";
+                doublepassword.ForeColor = Color.Black;
+            }
         }
 
         private void doublepassword_Leave(object sender, EventArgs e)
         {
-
+            if (doublepassword.Text == "")
+            {
+                doublepassword.Text = "Введите пароль повторно";
+                doublepassword.ForeColor = Color.Gray;
+            }
         }
 
         private void password_TextChanged(object sender, EventArgs e)

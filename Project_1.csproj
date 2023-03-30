@@ -161,6 +161,10 @@
     <Content Include="Images\9054385_bx_archive_in_icon.png" />
     <Content Include="Images\lock.png" />
     <Content Include="Images\user.png" />
+    <Content Include="Task.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

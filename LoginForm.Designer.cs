@@ -118,6 +118,7 @@
             this.password.Size = new System.Drawing.Size(266, 46);
             this.password.TabIndex = 4;
             this.password.UseSystemPasswordChar = true;
+
             // 
             // pictureBox2
             // 
@@ -140,6 +141,8 @@
             this.login.Name = "login";
             this.login.Size = new System.Drawing.Size(266, 59);
             this.login.TabIndex = 2;
+            this.login.Enter += new System.EventHandler(this.login_Enter);
+            this.login.Leave += new System.EventHandler(this.login_Leave);
             // 
             // pictureBox1
             // 

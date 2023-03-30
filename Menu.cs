@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Project_1
 {
@@ -16,17 +17,36 @@ namespace Project_1
         {
             InitializeComponent();
         }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
+        private void Menu_Load(object sender, EventArgs e)
         {
+            DataTable dt = new DataTable();
+            dt.Columns.Add("Описание", typeof(string));
+            dt.Columns.Add("Дедлайн", typeof(DateTime));
+            dt.Columns.Add("Срок выполнения", typeof(string));
 
+            dt.Rows.Add("Футбол", "2023, 05, 27", "6 месяцев");
+            dt.Rows.Add("Прием у доктора", "27/04/2023", "2 недели");
+            dt.Rows.Add("Сделать проект", "08/04/2023", "3 недели");
+
+            TaskTable.DataSource = dt;
         }
 
-        private void pictureBox3_Click(object sender, EventArgs e)
+        public class Task
         {
+            public string description;
+            public DateTime term;
+            public DateTime deadline;
+
+            public Task(string _description, DateTime _term, DateTime _deadline)
+            {
+                this.description = _description;
+                this.term = _term;
+                this.deadline = _deadline;
+
+            }
 
         }
-
+        List<Task> task = new List<Task>();
         private void timer1_Tick_1(object sender, EventArgs e)
         {
             this.labelTime.Text = DateTime.Now.ToString("hh:mm:ss");
